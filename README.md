@@ -1,26 +1,9 @@
-# payment-processor
-Payment Processor Challenge
-***
-
-***
-
-### Example of POSTMAN call
-
-Call URL https://localhost:44302/api/pay/ with POST
-with JSON:
-```json
-{
-	"creditCardNumber": "5402 6326 4830 4155",
-	"cardHolder" : "Dragos Durlut",
-	"expirationDate" : "2021-01-02",
-	"securityCode" : "123",
-	"amount" : 21
-}
-```
-
-***
-
-### DB Creation
+# PaymentProcess
+****************
+Payment Process Challenge
+****************
+ 
+ ### DB Creation
 
 - Set db connection string in appsettings.json 
 - Open Package Manager Console
@@ -28,13 +11,7 @@ with JSON:
 - Set Startup project to WepApi.
 - Run command update-database
 
-DB should be created
-
-***
-***
-
-# Requirements
-## Coding exercise:
+## Coding Exercise:
 
 Write a WebAPI with only 1 method called "ProcessPayment" that receives a request like this
 
@@ -47,13 +24,15 @@ Write a WebAPI with only 1 method called "ProcessPayment" that receives a reques
 - SecurityCode (optional, string, 3 digits)
 
 - Amount (mandatoy decimal, positive amount)
-***
+
+********************************
+
 Write a Payment domain/entity with the same properties as the request and a second entity to store the
 
 payment state (pending, processed, failed). Use Entity framework code first approach, write entity
 
 configurations and generate the migrations.
-***
+***********************
 The response of this method should be 1 of the followings based on
 
 - Payment is processed: 200 OK
